@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronômetro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="assets\css\left.css" />
+    <link rel="stylesheet" href="assets\css\center.css" />
+    <link rel="stylesheet" href="assets\css\right.css" />
+  </head>
+  <body>
+    <section>
+      <nav>
+        <a href="#">Cronômetro 1.0</a>
+      </nav>
+      <!-- PANEL -->
+      <div class="control">
+        <!-- Start Study -->
+        <div class="left">
+          <h2>Tempo de Estudo</h2>
+          <div class="timestart">
+            <label id="starting">00:00</label>
+            <label id="current">
+              <span id="curHhMm">00:00</span>
+              <span id="curSs">:00</span>
+            </label>
+          </div>
+          <div class="timecontrol">
+            <button id="startStudy" onclick="startStudy()">
+              <i class="fa fa-play"></i>
+            </button>
+            <button id="stopStudy" onclick="stopStudy()">
+              <i class="fa fa-stop"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Timer -->
+        <div class="center">
+          <div class="time">
+            <h1 id="timer">
+              <span id="min">00</span>:<span id="sec">00</span>
+            </h1>
+          </div>
+          <div class="time-control">
+            <button id="btnStart" onclick="startTimer()">
+              <i class="fa fa-play-circle"></i>
+              Começar
+            </button>
+            <button id="btnStop" onclick="stopTimer()">
+              <i class="fa fa-stop-circle"></i>
+              Parar
+            </button>
+          </div>
+        </div>
+
+        <!-- Tasks -->
+        <div class="right">
+          <h2>Tarefas</h2>
+          <div class="task">
+            <!-- TASK 1 -->
+            <div class="group">
+              <div class="label">
+                <label for="task1">1</label>
+              </div>
+              <div class="time">
+                <div class="title">
+                  <p>Minutos e Segundos</p>
+                </div>
+                <div class="input">
+                  <input
+                    id="task1min"
+                    type="number"
+                    value="0"
+                    placeholder="00"
+                    min="0"
+                    max="59"
+                  />
+                  <span>:</span>
+                  <input
+                    id="task1sec"
+                    type="number"
+                    value="0"
+                    min="0"
+                    max="59"
+                    placeholder="00"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets\js\control.js"></script>
+  </body>
+</html>

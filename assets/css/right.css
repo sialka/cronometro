@@ -1,0 +1,129 @@
+section .control .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  padding-right: 10px;
+  font-family: "Comfortaa", cursive;
+  /* font-family: "Raleway", sans-serif; */
+  /* background: blue; */
+  z-index: 2;
+}
+
+section .control .right h2 {
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 100;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  height: 2em;
+  padding-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* background: bisque; */
+}
+
+section .control .right .task {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+}
+
+section .control .right .task .group {
+  display: flex;
+  flex: column;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+}
+
+/* 1th div of group */
+section .control .right .task .group .label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  /* background: red; */
+}
+
+section .control .right .task .group .label label {
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  /* border: 2px solid #000; */
+  width: 1.2em;
+  height: 1.2em;
+  padding-top: 3px;
+  padding-left: 12px;
+  border-radius: 50%;
+  /* font-family: "Share Tech Mono", monospace; */
+  font-family: "Comfortaa", cursive;
+  font-weight: bolder;
+  color: #fff;
+}
+
+/* 2th div of group */
+
+section .control .right .task .group .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto 0;
+  width: 80%;
+  height: 80%;
+  /* background: green; */
+}
+
+section .control .right .task .group .time .title {
+  text-align: center;
+  color: #bdbdbd;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+  /* background: brown; */
+}
+
+section .control .right .task .group .time .input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  /* background: blueviolet; */
+}
+
+section .control .right .task .group .time .input input {
+  width: 45%;
+  height: 100%;
+  font-size: 4em;
+  text-align: center;
+  /* border: 1px solid #999; */
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Share Tech Mono", monospace;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+section .control .right .task .group .time .input span {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  width: 10%;
+  height: 100%;
+  font-size: 4em;
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+  color: #fff;
+  /* border: 2px solid brown; */
+}

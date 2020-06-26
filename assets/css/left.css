@@ -1,0 +1,97 @@
+section .control .left {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  font-family: "Comfortaa", cursive;
+  /* background: yellowgreen; */
+  z-index: 2;
+}
+
+section .control .left h2 {
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.5em;
+  height: 2em;
+  text-transform: uppercase;
+  /* background: green; */
+}
+
+section .control .left .timestart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+  align-items: center;
+  border-radius: 5px;
+  height: 200px;
+  width: 75%;
+  background: rgba(0, 0, 0, 0.2);
+  /* background: lightgoldenrodyellow; */
+}
+
+section .control .left .timestart label {
+  display: flex;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 5em;
+  font-family: "Share Tech Mono", monospace;
+  color: #fff;
+  /* border: 1px solid hotpink; */
+}
+
+section .control .left .timestart label#current {
+  font-size: 3.5em;
+  padding-bottom: 20px;
+}
+
+section .control .left .timestart label#current span#curHhMm {
+  /* font-size: 3.5em; */
+  color: #fff;
+}
+
+section .control .left .timestart label#current span#curSs {
+  font-size: 0.8em;
+  color: #fff;
+}
+
+section .control .left .timecontrol {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 45px;
+}
+
+section .control .left .timecontrol button {
+  font-family: "Comfortaa", cursive;
+  width: 46%;
+  height: 2.5em;
+  font-size: 2em;
+  background: transparent;
+  border-radius: 8px;
+  border: 4px solid #757575;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+section .control .left .timecontrol button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+section .control .left .timecontrol button:focus {
+  outline: none;
+}
+
+section .control .left .timecontrol button:disabled {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+section .control .left .timecontrol button:hover:disabled {
+  transform: scale(1);
+  background: rgba(255, 0, 0, 0.5);
+}

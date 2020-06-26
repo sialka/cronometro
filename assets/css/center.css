@@ -1,0 +1,63 @@
+section .control .center {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  /* background: white; */
+  z-index: 2;
+}
+
+section .control .center .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  text-shadow: 4px 4px 25px rgba(0, 0, 0, 0.5);
+  /* background: red; */
+}
+
+section .control .center .time h1 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12em;
+  color: #000;
+  cursor: context-menu;
+}
+
+section .control .center .time-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 25%;
+  /* background: brown; */
+}
+
+section .control .center .time-control button {
+  font-family: "Comfortaa", cursive;
+  height: 80%;
+  width: 45%;
+  font-size: 2em;
+  background: transparent;
+  border-radius: 8px;
+  border: 4px solid #757575;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+section .control .center .time-control button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+
+section .control .center .time-control button:focus {
+  outline: none;
+}
+
+section .control .center .time-control button:disabled {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+section .control .center .time-control button:hover:disabled {
+  transform: scale(1);
+  background: rgba(255, 0, 0, 0.5);
+}
