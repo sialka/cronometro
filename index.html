@@ -27,16 +27,23 @@
             <label id="starting">00:00</label>
             <label id="current">
               <span id="curHhMm">00:00</span>
-              <span id="curSs">:00</span>
+              <span id="curSs">00</span>
             </label>
-          </div>
-          <div class="timecontrol">
-            <button id="startStudy" onclick="startStudy()">
-              <i class="fa fa-play"></i>
-            </button>
-            <button id="stopStudy" onclick="stopStudy()">
-              <i class="fa fa-stop"></i>
-            </button>
+            <!-- </div> -->
+            <div class="timecontrol">
+              <button id="startStudy" onclick="startStudy()">
+                <!-- <i class="fa fa-play"></i> -->
+                <i class="fas fa-clock"></i>
+              </button>
+              <button id="pauseStudy" onclick="pauseStudy()">
+                <!-- <i class="fa fa-play"></i> -->
+                <i class="fas fa-pause"></i>
+              </button>
+              <button id="stopStudy" onclick="stopStudy()">
+                <!-- <i class="fa fa-stop"></i> -->
+                <i class="fas fa-stopwatch"></i>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -44,16 +51,18 @@
         <div class="center">
           <div class="time">
             <h1 id="timer">
-              <span id="min">00</span>:<span id="sec">00</span>
+              <span id="min">00</span>
+              <span id="point">:</span>
+              <span id="sec">00</span>
             </h1>
           </div>
           <div class="time-control">
             <button id="btnStart" onclick="startTimer()">
-              <i class="fa fa-play-circle"></i>
+              <i class="fas fa-play"></i>
               Começar
             </button>
             <button id="btnStop" onclick="stopTimer()">
-              <i class="fa fa-stop-circle"></i>
+              <i class="fas fa-stop"></i>
               Parar
             </button>
           </div>
@@ -69,10 +78,11 @@
                 <label for="task1">1</label>
               </div>
               <div class="time">
-                <div class="title">
+                <!--div class="title">
                   <p>Minutos e Segundos</p>
-                </div>
+                </div-->
                 <div class="input">
+                  <label for="">Min</label>
                   <input
                     id="task1min"
                     type="number"
@@ -81,7 +91,12 @@
                     min="0"
                     max="59"
                   />
+                </div>
+                <div class="input">
                   <span>:</span>
+                </div>
+                <div class="input">
+                  <label for="">Seg</label>
                   <input
                     id="task1sec"
                     type="number"
