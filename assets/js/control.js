@@ -9,14 +9,17 @@ const btnStop = document.querySelector("#btnStop");
 // SetInterval
 let timeTask;
 let timeStudy;
+let pauseTimeStudy = false;
 
 // Control Total Study
 const timeStart = document.querySelector("#starting");
 const timeEnd = document.querySelector("#curHhMm");
 const timeSec = document.querySelector("#curSs");
 const btnStartStudy = document.querySelector("#startStudy");
+const btnPauseStudy = document.querySelector("#pauseStudy");
 const btnStopStudy = document.querySelector("#stopStudy");
 
+btnPauseStudy.disabled = true;
 btnStopStudy.disabled = true;
 btnStop.disabled = true;
 
@@ -29,46 +32,59 @@ function startStudy() {
   let h = 0;
   let m = 0;
   let s = 0;
+  pauseTimeStudy = 1000;
   timeEnd.innerHTML = "00:00";
-  timeSec.innerHTML = ":00";
+  timeSec.innerHTML = "00";
   timeEnd.style.color = "#00CC6A";
-  timeSec.style.color = "yellow";
+  timeSec.style.color = "#fff";
 
   // return;
 
   clearTimeout(timeStudy);
 
   btnStartStudy.disabled = true;
+  btnPauseStudy.disabled = false;
   btnStopStudy.disabled = false;
 
   timeStudy = setInterval(() => {
-    s++;
-    if (s == 59) {
-      s = 0;
-      m++;
-    }
-    if (m == 59) {
-      m = 0;
-      h++;
-    }
+    if (pauseTimeStudy) {
+      s++;
+      if (s == 59) {
+        s = 0;
+        m++;
+      }
+      if (m == 59) {
+        m = 0;
+        h++;
+      }
 
-    hh = h.toString().length === 1 ? `0${h}` : h;
-    mm = m.toString().length === 1 ? `0${m}` : m;
-    ss = s.toString().length === 1 ? `0${s}` : s;
+      hh = h.toString().length === 1 ? `0${h}` : h;
+      mm = m.toString().length === 1 ? `0${m}` : m;
+      ss = s.toString().length === 1 ? `0${s}` : s;
 
-    // console.log(`${hh}:${mm}:${ss}`);
-    // timeEnd.innerHTML = `${hh}:${mm}`;
-    timeSec.innerHTML = `:${ss}`;
+      // console.log(`${hh}:${mm}:${ss}`);
+      timeEnd.innerHTML = `${hh}:${mm}`;
+      timeSec.innerHTML = `${ss}`;
+    }
   }, 1000);
+}
+
+function pauseStudy() {
+  if (pauseTimeStudy) {
+    pauseTimeStudy = false;
+  } else {
+    pauseTimeStudy = true;
+  }
 }
 
 function stopStudy() {
   btnStartStudy.disabled = false;
+  btnPauseStudy.disabled = true;
   btnStopStudy.disabled = true;
 
   timeStart.innerHTML = "00:00";
   timeEnd.innerHTML = "00:00";
-  timeSec.innerHTML = ":00";
+  timeSec.innerHTML = "00";
   timeEnd.style.color = "#fff";
   timeSec.style.color = "#fff";
 
@@ -86,7 +102,7 @@ function startTimer() {
 
   if (min === "0" || min === "00" || min === "") {
     if (sec === "0") {
-      alert("Informe a quantidade de minutos!");
+      alert("Informe os minutos ou segundos!");
       return false;
     }
   }
@@ -99,7 +115,7 @@ function startTimer() {
   // Validation of seconds
 
   if (sec === "") {
-    alert("Informe a quantidade de segundos!");
+    alert("Informe os segundos!");
     return false;
   }
 
