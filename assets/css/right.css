@@ -5,7 +5,7 @@ section .control .right {
   align-items: center;
   width: 25%;
   height: 100%;
-  padding-right: 10px;
+  /* padding-right: 10px; */
   font-family: "Comfortaa", cursive;
   /* font-family: "Raleway", sans-serif; */
   /* background: blue; */
@@ -30,21 +30,23 @@ section .control .right .task {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 75%;
   height: 150px;
   margin: 20px auto;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.2);
-  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  /* border: 4px solid #999; */
   /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 section .control .right .task .group {
   display: flex;
   flex: column;
-  width: 100%;
-  height: 100%;
-  padding-right: 10px;
+  margin: auto auto;
+  width: 95%;
+  height: 90%;
+  /* padding-right: 10px; */
 }
 
 /* 1th div of group */
@@ -53,6 +55,7 @@ section .control .right .task .group .label {
   justify-content: center;
   align-items: center;
   width: 20%;
+  padding: 10px;
   /* background: red; */
 }
 
@@ -62,9 +65,9 @@ section .control .right .task .group .label label {
   /* border: 2px solid #000; */
   width: 1.2em;
   height: 1.2em;
-  padding-top: 3px;
-  padding-left: 12px;
-  border-radius: 50%;
+  padding-top: 4px;
+  padding-left: 7px;
+  border-radius: 5px;
   /* font-family: "Share Tech Mono", monospace; */
   font-family: "Comfortaa", cursive;
   font-weight: bolder;
@@ -75,37 +78,51 @@ section .control .right .task .group .label label {
 
 section .control .right .task .group .time {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  margin: auto 0;
-  width: 80%;
-  height: 80%;
+  /* margin: auto 0; */
+  width: 100%;
+  height: 100%;
   /* background: green; */
 }
 
-section .control .right .task .group .time .title {
+/* section .control .right .task .group .time .title {
   text-align: center;
   color: #bdbdbd;
   letter-spacing: 2px;
   padding-bottom: 10px;
   /* padding-bottom: 10px; */
-  /* background: brown; */
-}
+/* background: brown; * /
+} */
 
 section .control .right .task .group .time .input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  height: 100%;
+  /* height: 100%; */
+  /* width: 90%; */
   /* background: blueviolet; */
+  width: 45%;
+}
+section .control .right .task .group .time .input:nth-child(2) {
+  /* background: khaki; */
+  width: 10%;
+}
+
+section .control .right .task .group .time .input label {
+  text-align: center;
+  padding: 5px 0;
+  color: #fff;
 }
 
 section .control .right .task .group .time .input input {
-  width: 45%;
+  width: 100%;
   height: 100%;
   font-size: 4em;
   text-align: center;
+  /* margin: 5px 10px; */
+  /* padding: 0; */
   /* border: 1px solid #999; */
   border: 0;
   outline: none;
@@ -118,8 +135,8 @@ section .control .right .task .group .time .input input {
 section .control .right .task .group .time .input span {
   display: flex;
   justify-content: center;
-  padding-top: 5px;
-  width: 10%;
+  padding-top: 35px;
+  width: 100%;
   height: 100%;
   font-size: 4em;
   text-align: center;
